@@ -10,7 +10,9 @@
         <form action="/Usuarios/Index" method="get" >
             <div class="input-group mb-3">
                 <input name="query" type="text" class="form-control">
-                <button class="btn btn-primary" type="submit"> Pesquisar </button>
+                <button class="btn btn-primary" type="submit">
+                    Pesquisar
+                </button>
             </div>
         </form>
     </div>
@@ -36,3 +38,20 @@
         }
     </tbody>
 </table>
+
+
+            <button id="botao" onclick="Piscar()" >
+                Clique aqui  o para piscar
+            </button>
+            <script>
+                function Piscar()
+                {
+                    var botao = document.getElementById("botao")
+                    if(botao.style.backgroundColor == 'red')
+                    {
+                        botao.style.backgroundColor = 'blue'
+                    }else{
+                        botao.style.backgroundColor = 'red'
+                    }
+                }
+            </script>
