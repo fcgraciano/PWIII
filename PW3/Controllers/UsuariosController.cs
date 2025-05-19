@@ -28,5 +28,10 @@ namespace PW3.Controllers
             connection.Close();
             return View(model);
         }
+       
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
