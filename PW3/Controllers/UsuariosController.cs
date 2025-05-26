@@ -28,5 +28,57 @@ namespace PW3.Controllers
             connection.Close();
             return View(model);
         }
+
+        /*
+         
+         
+
+         public Usuario? BuscarPorId(int id)
+    {
+        using var connection = new MySqlConnection(_connectionString);
+        connection.Open();
+
+        var cmd = new MySqlCommand("SELECT id, nome FROM usuarios WHERE id = @id", connection);
+        cmd.Parameters.AddWithValue("@id", id);
+        using var reader = cmd.ExecuteReader();
+
+        if (reader.Read())
+        {
+            return new Usuario
+            {
+                Id = reader.GetInt32("id"),
+                Nome = reader.GetString("nome")
+            };
+        }
+
+        return null;
+    }
+
+    public List<Usuario> BuscarPorNome(string nome)
+    {
+        var usuarios = new List<Usuario>();
+
+        using var connection = new MySqlConnection(_connectionString);
+        connection.Open();
+
+        var cmd = new MySqlCommand("SELECT id, nome FROM usuarios WHERE nome LIKE @nome", connection);
+        cmd.Parameters.AddWithValue("@nome", $"%{nome}%");
+
+        using var reader = cmd.ExecuteReader();
+
+        while (reader.Read())
+        {
+            usuarios.Add(new Usuario
+            {
+                Id = reader.GetInt32("id"),
+                Nome = reader.GetString("nome")
+            });
+        }
+
+        return usuarios;
+    }
+}
+
+        */
     }
 }
