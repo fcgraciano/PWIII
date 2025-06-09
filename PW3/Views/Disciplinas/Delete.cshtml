@@ -34,6 +34,7 @@
     
     <form asp-action="Delete">
         <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <input type="hidden" name="Id" value="@Model.Id" />
         <a asp-action="Index">Back to List</a>
     </form>
 </div>

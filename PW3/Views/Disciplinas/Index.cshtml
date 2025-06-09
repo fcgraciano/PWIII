@@ -39,8 +39,10 @@
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                 <a href="/Disciplinas/Edit/@item.Id"> Editar manualemnte</a>
                 @Html.ActionLink("Detalhes", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Excluir", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Excluir", "Delete", new { id=item.Id })
+                    <a class="btn btn-danger" href="/Disciplinas/Delete/@item.Id"> Excluir</a>
             </td>
         </tr>
 }
